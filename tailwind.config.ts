@@ -5,11 +5,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#1D4F91',
-        accent: '#D4AF37',
+        primary: '#1D4F91', // Dyyota blue
+        accent: '#D4AF37',  // Dyyota gold
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
   plugins: [],
 };
+
 export default config;
