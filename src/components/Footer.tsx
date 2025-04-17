@@ -1,7 +1,11 @@
-export default function Footer() {
+import React from "react";
+
+const Footer: React.FC = () => {
   return (
-    <footer className="py-8 text-center text-sm text-gray-500 border-t mt-16">
+    <footer className="border-t mt-16 py-6 text-center text-sm text-gray-500">
       © 2025 Dyyota Tech. All rights reserved.
     </footer>
   );
-}
+};
+
+export default Footer;

@@ -1,10 +1,25 @@
 import { theme } from '../assets/colors';
-export default function Hero() {
+import React from "react";
+
+const Hero: React.FC = () => {
   return (
-    <section className="text-center py-20 bg-[${theme.primary}] text-white">
-      <h1 className="text-4xl font-bold mb-4">Master AI Prompting with Dyyota Tech</h1>
-      <p className="text-lg max-w-xl mx-auto">A hands-on course designed for non-technical professionals to become AI superusers in weeks.</p>
-      <a href="#enroll" className="mt-8 inline-block bg-[${theme.accent}] px-6 py-3 rounded text-black font-semibold">Get Started</a>
+    <section className="bg-[--primary] text-white py-20 px-6 text-center">
+      <div className="max-w-3xl mx-auto space-y-6">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          Master AI Prompting with Dyyota Tech
+        </h1>
+        <p className="text-lg md:text-xl font-medium">
+          A hands-on course designed for non-technical professionals to become AI superusers in just a few weeks.
+        </p>
+        <a href="#enroll">
+          <button className="bg-[--accent] text-white font-bold px-6 py-3 rounded-md hover:opacity-90 transition">
+            Get Started
+          </button>
+        </a>
+      </div>
     </section>
   );
-}
+};
+
+export default Hero;
+
