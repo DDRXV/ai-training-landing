@@ -5,7 +5,6 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(<App />);
 
-/* 📄 index.html */
 <!DOCTYPE html>
 <html lang="en">
   <head>
