@@ -1,4 +1,3 @@
-/* ⭐ Testimonials.tsx */
 export default function Testimonials() {
   return (
     <section id="testimonials" className="py-16">

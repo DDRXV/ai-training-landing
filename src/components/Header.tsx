@@ -1,4 +1,3 @@
-/* 🧩 Header.tsx */
 import { theme } from '../assets/colors';
 export default function Header() {
   return (

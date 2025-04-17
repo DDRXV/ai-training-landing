@@ -1,4 +1,3 @@
-/* ✅ Features.tsx */
 export default function Features() {
   const features = [
     'Live Projects & Use Cases',
