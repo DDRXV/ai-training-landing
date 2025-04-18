@@ -1,41 +1,39 @@
-import { theme } from '../assets/colors';
-import React from "react";
+import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuLink,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
-const Header: React.FC = () => {
+export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="/">
-              <img src="/logo.png" alt="Logo" className="h-10" />
-            </a>
-          </div>
+    <header className="fixed inset-x-0 top-0 z-50 border-b bg-white/70 backdrop-blur">
+      <div className="container flex h-16 items-center justify-between">
+        {/* Logo */}
+        <img src="/logo.png" alt="Dyyota logo" className="h-9" />
 
-          {/* Nav Links */}
-          <nav className="hidden md:flex space-x-6 items-center text-[--primary] font-medium">
-            <a href="#features" className="hover:text-[--accent] transition-colors duration-200">
-              Features
-            </a>
-            <a href="#testimonials" className="hover:text-[--accent] transition-colors duration-200">
-              Testimonials
-            </a>
-            <a href="#enroll">
-              <button className="bg-[--accent] text-white px-4 py-2 rounded-md hover:opacity-90 transition">
-                Enroll
-              </button>
-            </a>
-          </nav>
+        {/* Navigation */}
+        <NavigationMenu>
+          <NavigationMenuList>
+            {["Features", "Testimonials", "Enroll"].map((item) => (
+              <NavigationMenuItem key={item}>
+                <a href={`#${item.toLowerCase()}`}>
+                  <NavigationMenuLink className={cn("font-medium")}>
+                    {item}
+                  </NavigationMenuLink>
+                </a>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
 
-          {/* Mobile Menu Button (optional) */}
-          <div className="md:hidden">
-            {/* You can add a mobile menu toggle here */}
-          </div>
-        </div>
+        {/* CTA */}
+        <Button asChild size="sm" className="hidden md:inline-flex">
+          <a href="#enroll">Get Started</a>
+        </Button>
       </div>
     </header>
   );
-};
-
-export default Header;
+}
